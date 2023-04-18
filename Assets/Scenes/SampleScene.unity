@@ -123,6 +123,78 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &6360243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6360244}
+  - component: {fileID: 6360246}
+  - component: {fileID: 6360245}
+  m_Layer: 0
+  m_Name: GroundSensor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6360244
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6360243}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.03, y: -1.775, z: -0.64609295}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 959914456}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6360245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6360243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7c8e42316e18a14d83cb13bf3f57432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGrounded: 0
+--- !u!61 &6360246
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6360243}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.3121872}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.76214314}
+  m_EdgeRadius: 0
 --- !u!1 &14292308
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +206,7 @@ GameObject:
   - component: {fileID: 14292309}
   - component: {fileID: 14292311}
   - component: {fileID: 14292310}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: suelo (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +351,7 @@ GameObject:
   - component: {fileID: 81437556}
   - component: {fileID: 81437558}
   - component: {fileID: 81437557}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: suelo (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -390,7 +462,7 @@ GameObject:
   - component: {fileID: 219444307}
   - component: {fileID: 219444309}
   - component: {fileID: 219444308}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: valla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +573,7 @@ GameObject:
   - component: {fileID: 250385657}
   - component: {fileID: 250385659}
   - component: {fileID: 250385658}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: suelo (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -670,6 +742,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -743,6 +816,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc51c2d4a66bacf44995ef4826408410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 0, y: 0, z: -10}
+  limitX: {x: 0, y: 30.34}
+  limitY: {x: 0, y: 5.04}
+  interpolationRatio: 0
 --- !u!1 &561351158
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,7 +843,7 @@ GameObject:
   - component: {fileID: 561351159}
   - component: {fileID: 561351161}
   - component: {fileID: 561351160}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: plataforma (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -904,6 +993,7 @@ GameObject:
   - component: {fileID: 959914455}
   - component: {fileID: 959914454}
   - component: {fileID: 959914453}
+  - component: {fileID: 959914457}
   m_Layer: 0
   m_Name: Personaje
   m_TagString: Untagged
@@ -1018,13 +1108,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 959914452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.5, y: 3.06, z: 0}
+  m_LocalPosition: {x: -8.25, y: 3.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6360244}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &959914457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959914452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418291add082a6d4a9b222f53b84b235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpeed: 5.5
+  jumpforce: 10
+  anim: {fileID: 0}
 --- !u!1 &1010385673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,7 +1142,7 @@ GameObject:
   - component: {fileID: 1010385674}
   - component: {fileID: 1010385676}
   - component: {fileID: 1010385675}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: suelo (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1147,7 +1253,7 @@ GameObject:
   - component: {fileID: 1325639092}
   - component: {fileID: 1325639094}
   - component: {fileID: 1325639093}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: suelo (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1258,7 +1364,7 @@ GameObject:
   - component: {fileID: 1386612418}
   - component: {fileID: 1386612420}
   - component: {fileID: 1386612419}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: suelo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1544,7 +1650,7 @@ GameObject:
   - component: {fileID: 1640272897}
   - component: {fileID: 1640272899}
   - component: {fileID: 1640272898}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: basura
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1655,7 +1761,7 @@ GameObject:
   - component: {fileID: 1771567368}
   - component: {fileID: 1771567369}
   - component: {fileID: 1771567370}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: plataforma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1766,7 +1872,7 @@ GameObject:
   - component: {fileID: 1911151318}
   - component: {fileID: 1911151320}
   - component: {fileID: 1911151319}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: plataforma (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1910,7 +2016,7 @@ GameObject:
   - component: {fileID: 2042556618}
   - component: {fileID: 2042556620}
   - component: {fileID: 2042556619}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: suelo (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

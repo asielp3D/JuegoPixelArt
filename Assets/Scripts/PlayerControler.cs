@@ -20,29 +20,35 @@ public class PlayerControler : MonoBehaviour
         rBody = GetComponent <Rigidbody2D>();
         anim = GetComponent<Animator>();
         sensor = GameObject.Find("GroundSensor").GetComponent <GroundSensor>();
-        playerHealt = 10;
     }
 
     // Update is called once per frame
     void Update()
     {
         horizontal = Input.GetAxis("Horizontal");
+        
         if(horizontal < 0)
         {
-            spriteRenderer.flipX = true;
+            transform.rotation = Quaternion.Euler(0, 180, 0);
             //anim.SetBool("IsRunning", true);
         }
         else if(horizontal > 0)
         {
-            spriteRenderer.flipX = false;
+            transform.rotation = Quaternion.Euler(0,  0, 0);
             //anim.SetBool("IsRunning", true);
         }
-        else
+
+        //else
         //anim.SetBool("IsRunning", false);
         if (Input.GetButtonDown("Jump") && sensor.isGrounded)
         {
             rBody.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
             //anim.SetBool("IsJumping", true);
         }
+    }
+
+    private void FixedUpdate() 
+    {
+        rBody.velocity = new Vector2(horizontal * playerSpeed, rBody.velocity.y);
     }
 }
