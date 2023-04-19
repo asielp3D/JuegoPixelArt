@@ -17,7 +17,7 @@ public class GroundSensor : MonoBehaviour
     if (other.gameObject.layer == 3)
     {
     isGrounded = true;
-    //controller.anim.SetBool("IsJumping" , false);
+    controller.anim.SetBool("IsJumping" , false);
     }
    }
 
@@ -26,7 +26,7 @@ public class GroundSensor : MonoBehaviour
     if(other.gameObject.layer == 3)
     {
       isGrounded = true;
-      //controller.anim.SetBool("IsJumping" , false);
+      controller.anim.SetBool("IsJumping" , false);
     }
    }
 
@@ -35,7 +35,7 @@ public class GroundSensor : MonoBehaviour
     if (other.gameObject.layer == 3)
     {
       isGrounded = false;
-      //controller.anim.SetBool("IsJumping" , true);
+      controller.anim.SetBool("IsJumping" , true);
     }
     
    }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Camara : MonoBehaviour
 {
-    private Transform target;
+    public Transform target;
     public Vector3 offset;
     // Vectores para limitar el movimiento de la camara en los ejes x e y
     public Vector2 limitX;

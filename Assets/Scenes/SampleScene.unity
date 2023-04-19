@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 312546284}
   - component: {fileID: 312546285}
   m_Layer: 0
-  m_Name: borde
+  m_Name: borde iz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -809,7 +809,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 13.99, y: 4.93, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -828,10 +828,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc51c2d4a66bacf44995ef4826408410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 959914456}
   offset: {x: 0, y: 0, z: -10}
-  limitX: {x: 0, y: 30.34}
-  limitY: {x: 0, y: 5.04}
-  interpolationRatio: 0
+  limitX: {x: 0, y: 30.21}
+  limitY: {x: 0, y: 4.93}
+  interpolationRatio: 0.2
 --- !u!1 &561351158
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,6 +995,7 @@ GameObject:
   - component: {fileID: 959914454}
   - component: {fileID: 959914453}
   - component: {fileID: 959914457}
+  - component: {fileID: 959914458}
   m_Layer: 0
   m_Name: Personaje
   m_TagString: Untagged
@@ -1021,7 +1023,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &959914454
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1031,7 +1033,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 959914452}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0d4121410eb9bd44b819b1e4761c1345, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1131,6 +1133,26 @@ MonoBehaviour:
   playerSpeed: 5.5
   jumpforce: 10
   anim: {fileID: 0}
+--- !u!95 &959914458
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959914452}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cb2cf4d8781a08248b85eb862a954bc8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1010385673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,7 +1530,7 @@ GameObject:
   - component: {fileID: 1468066192}
   - component: {fileID: 1468066193}
   m_Layer: 0
-  m_Name: borde (1)
+  m_Name: borde der
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

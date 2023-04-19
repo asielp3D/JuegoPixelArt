@@ -30,20 +30,20 @@ public class PlayerControler : MonoBehaviour
         if(horizontal < 0)
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
-            //anim.SetBool("IsRunning", true);
+            anim.SetBool("IsRunning", true);
         }
         else if(horizontal > 0)
         {
             transform.rotation = Quaternion.Euler(0,  0, 0);
-            //anim.SetBool("IsRunning", true);
+            anim.SetBool("IsRunning", true);
         }
 
-        //else
-        //anim.SetBool("IsRunning", false);
+        else
+        anim.SetBool("IsRunning", false);
         if (Input.GetButtonDown("Jump") && sensor.isGrounded)
         {
             rBody.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
-            //anim.SetBool("IsJumping", true);
+            anim.SetBool("IsJumping", true);
         }
     }
 
