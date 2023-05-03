@@ -25,7 +25,7 @@ public class GroundSensor : MonoBehaviour
     controller.anim.SetBool("IsJumping" , false);
     }
 
-    else if(other.gameObject.layer == 6)
+    else if(other.gameObject.layer == 7)
     {
       Debug.Log("Enemigo muerto");
       sfxManager.EnemyDeath();

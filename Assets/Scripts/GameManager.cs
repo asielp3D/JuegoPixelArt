@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public bool canShoot;
-    public float powerUpDuration = 5;
+    public float powerUpDuration;
     float powerUpTimer = 0;
 
     public List<GameObject> enemiesInScreen = new List<GameObject>();

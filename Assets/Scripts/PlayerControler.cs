@@ -53,7 +53,7 @@ public class PlayerControler : MonoBehaviour
             anim.SetBool("IsJumping", true);
         }
 
-         if(Input.GetKeyDown(KeyCode.F)&& gameManager.canShoot)
+         if(Input.GetKeyDown(KeyCode.F))
         {
             Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
         }
