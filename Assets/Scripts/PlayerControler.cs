@@ -13,6 +13,9 @@ public class PlayerControler : MonoBehaviour
     private GroundSensor sensor;
     public Animator anim;
     float horizontal;
+    public Transform attackHitBox;
+    public float attackRange;
+    public LayerMask enemyLayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,10 +48,42 @@ public class PlayerControler : MonoBehaviour
             rBody.AddForce(Vector2.up * jumpforce, ForceMode2D.Impulse);
             anim.SetBool("IsJumping", true);
         }
+
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            Attack();
+        }
     }
 
     private void FixedUpdate() 
     {
         rBody.velocity = new Vector2(horizontal * playerSpeed, rBody.velocity.y);
     }
+
+    void Attack()
+    {
+        Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(attackHitBox.position, attackRange, enemyLayer);
+        for (int i=0; i <enemiesInRange.Length;i++)
+        {
+            Destroy(enemiesInRange[i].gameObject);
+        }
+        
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "ColisionCoin")
+        {
+            Debug.Log("Moneda cogida");
+            Cat cat = collision.gameObject.GetComponent<Cat>();
+            cat.Pick();
+        }
+
+        if(collision.gameObject.tag == "PowerUp")
+        {
+            Destroy(collision.gameObject);
+        }
+    }
+
+    
 }
