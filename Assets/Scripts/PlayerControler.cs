@@ -76,6 +76,7 @@ public class PlayerControler : MonoBehaviour
 
         if(collision.gameObject.tag == "PowerUp")
         {
+            gameManager.canShoot = true;
             Destroy(collision.gameObject);
         }
     }
