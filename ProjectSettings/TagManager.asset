@@ -7,6 +7,7 @@ TagManager:
   - DeadZone
   - ColisionEnemy
   - PowerUp
+  - Bullet
   layers:
   - Default
   - TransparentFX

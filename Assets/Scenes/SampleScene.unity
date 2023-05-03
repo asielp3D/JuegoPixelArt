@@ -1653,6 +1653,9 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 0
+  bulletPrefab: {fileID: 0}
+  bulletSpawn: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!95 &959914458
 Animator:
   serializedVersion: 4

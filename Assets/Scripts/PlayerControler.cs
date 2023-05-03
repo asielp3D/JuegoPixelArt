@@ -16,6 +16,9 @@ public class PlayerControler : MonoBehaviour
     public Transform attackHitBox;
     public float attackRange;
     public LayerMask enemyLayer;
+    public GameObject bulletPrefab;
+    public Transform bulletSpawn;
+    public GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,7 @@ public class PlayerControler : MonoBehaviour
         rBody = GetComponent <Rigidbody2D>();
         anim = GetComponent<Animator>();
         sensor = GameObject.Find("GroundSensor").GetComponent <GroundSensor>();
+        gameManager = GameObject.Find("GameManager").GetComponent <GameManager>();
     }
 
     // Update is called once per frame
@@ -49,9 +53,9 @@ public class PlayerControler : MonoBehaviour
             anim.SetBool("IsJumping", true);
         }
 
-        if(Input.GetKeyDown(KeyCode.Q))
+         if(Input.GetKeyDown(KeyCode.F)&& gameManager.canShoot)
         {
-            Attack();
+            Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
         }
     }
 
@@ -60,15 +64,6 @@ public class PlayerControler : MonoBehaviour
         rBody.velocity = new Vector2(horizontal * playerSpeed, rBody.velocity.y);
     }
 
-    void Attack()
-    {
-        Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(attackHitBox.position, attackRange, enemyLayer);
-        for (int i=0; i <enemiesInRange.Length;i++)
-        {
-            Destroy(enemiesInRange[i].gameObject);
-        }
-        
-    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {

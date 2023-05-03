@@ -27,8 +27,8 @@ public class GroundSensor : MonoBehaviour
 
     else if(other.gameObject.layer == 6)
     {
-      Debug.Log("Niño muerto");
-      sfxManager.PlayerDeath();
+      Debug.Log("Enemigo muerto");
+      sfxManager.EnemyDeath();
       Enemy enemy = other.gameObject.GetComponent<Enemy>();
       enemy.Die();
     }
