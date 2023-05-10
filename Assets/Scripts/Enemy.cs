@@ -43,6 +43,7 @@ public class Enemy : MonoBehaviour
             Destroy(collision.gameObject);
             soundManager.StopBGM();
             sfxManager.PlayerDeath();
+            SceneManager.LoadScene(2);
         }
             
         if(collision.gameObject.tag == "ColisionEnemy")

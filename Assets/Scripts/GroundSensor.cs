@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine; 
+using UnityEngine.SceneManagement;
 
 public class GroundSensor : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class GroundSensor : MonoBehaviour
    public bool isGrounded;
    SFXManager sfxManager;
    SoundManager soundManager;
+   
 
    void Awake ()
    {
@@ -38,6 +40,7 @@ public class GroundSensor : MonoBehaviour
       Debug.Log("Estoy muerto");
       soundManager.StopBGM();
       sfxManager.PlayerDeath();
+      SceneManager.LoadScene(2);
     }
    }
 

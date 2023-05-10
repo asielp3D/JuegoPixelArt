@@ -69,7 +69,7 @@ public class PlayerControler : MonoBehaviour
     {
         if(collision.gameObject.tag == "ColisionCoin")
         {
-            Debug.Log("Moneda cogida");
+            Debug.Log("gato cogido");
             Cat cat = collision.gameObject.GetComponent<Cat>();
             cat.Pick();
         }
