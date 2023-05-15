@@ -6,6 +6,7 @@ public class SoundManager : MonoBehaviour
 {
 
     public AudioClip lvl1Music;
+    public AudioClip menuMusic;
 
     private AudioSource source;
 
